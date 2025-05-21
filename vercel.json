@@ -7,13 +7,7 @@
     { "src": "assets/**", "use": "@vercel/static" }
   ],
   "rewrites": [
-    { "source": "/",             "destination": "/index.html" },
-    { "source": "/about",        "destination": "/about.html" },
-    { "source": "/certificates", "destination": "/certificates.html" },
-    { "source": "/services",     "destination": "/services.html" },
-    { "source": "/faqs",         "destination": "/faqs.html" },
-    { "source": "/gallery",      "destination": "/gallery.html" },
-    { "source": "/contact",      "destination": "/contact.html" }
-  ],
-  "cleanUrls": true
+    { "source": "/",                    "destination": "/index.html" },
+    { "source": "^/([^/.]+)$",          "destination": "/$1.html" }
+  ]
 }
