@@ -1,0 +1,30 @@
+// vercel.json
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "css/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "js/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "assets/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    // so /about → about.html, /services → services.html, etc.
+    { "src": "/([^/.]+)$", "dest": "/$1.html" },
+    // default root
+    { "src": "/", "dest": "/index.html" }
+  ],
+  // optional: strip .html from URLs in browser
+  "cleanUrls": true
+}
