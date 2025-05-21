@@ -6,36 +6,14 @@
     { "src": "js/**",     "use": "@vercel/static" },
     { "src": "assets/**", "use": "@vercel/static" }
   ],
-  "routes": [
-    {
-      "src": "/",
-      "dest": "/index.html"
-    },
-    {
-      "src": "/about",
-      "dest": "/about.html"
-    },
-    {
-      "src": "/certificates",
-      "dest": "/certificates.html"
-    },
-    {
-      "src": "/services",
-      "dest": "/services.html"
-    },
-    {
-      "src": "/faqs",
-      "dest": "/faqs.html"
-    },
-    {
-      "src": "/gallery",
-      "dest": "/gallery.html"
-    },
-    {
-      "src": "/contact",
-      "dest": "/contact.html"
-    }
+  "rewrites": [
+    { "source": "/",             "destination": "/index.html" },
+    { "source": "/about",        "destination": "/about.html" },
+    { "source": "/certificates", "destination": "/certificates.html" },
+    { "source": "/services",     "destination": "/services.html" },
+    { "source": "/faqs",         "destination": "/faqs.html" },
+    { "source": "/gallery",      "destination": "/gallery.html" },
+    { "source": "/contact",      "destination": "/contact.html" }
   ],
-  "cleanUrls": true,
-  "trailingSlash": false
+  "cleanUrls": true
 }
